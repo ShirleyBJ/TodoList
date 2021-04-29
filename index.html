@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--Fontawesome icon-->
+        <script src="https://kit.fontawesome.com/1a87241148.js" crossorigin="anonymous"></script>
+    <!--Javascript-->
+        <script src="assets/js/script.js" defer></script>
+    <!--Stylesheet-->
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <!--Caveat font enbed-->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;700&family=Indie+Flower&display=swap" rel="stylesheet">
+    <!--Bootsrap modal box-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" 
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" 
+        crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" 
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" 
+        crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" 
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" 
+        crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+</head>
+<body>
+    <header>
+        <h1>To Do List</h1>
+    </header>
+    <div id="modal-box">
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-link" data-toggle="modal" data-target="#exampleModal">
+            <i class="fas fa-question-circle"></i>
+        </button>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 class="modal-title" id="exampleModalLabel">Bienvenue sur votre TodoList</h3>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <h4>Conseil d'utilisation :</h4>
+                        <hr>
+                        <h5 class="underline">Ajouter une tâche</h3>
+                        <p>Veuillez saisir un titre et une description, puis validez en appuyant sur l'icone <i class="fas fa-plus-circle"></i>.</i></p>
+                        <p><span><i class="fas fa-exclamation-circle"></i></span> Aucune tâche ne peut être ajouter si l'un des 2 champs est manquants. Le titre et la tâche sont obligatoire.</p>
+                        <h5 class="underline">Marquer une tâche comme complété</h3>
+                        <p>Cliquer sur l'icône <i class="fas fa-check-circle"></i>. Une tâche marquer comme "complété" sera considérer comme supprimer par le compteur de tâche.</p>
+                        <h5 class="underline">Supprimer une tâche</h3>
+                        <p>Cliquer sur l'icone <i class="fas fa-trash-alt"></i> de la tâche que vous souhaitez supprimer.</p>
+                        <h5 class="underline">Supprimer toutes les tâches</h3>
+                        <p>Faites un double-clique sur le compteur de tâches au centre de votre application.</p>
+                        <h5 class="underline">Changer le fond décran de votre todolist</h5>
+                        <p>Faites un simple clic sur l'image de votre choix.</p>
+                        <p><span><i class="fas fa-exclamation-circle"></i></span> Vos fonds d'écran changent à chaque rechargement de page.</p>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <aside><!--Contient image crée par appel Ajax--></aside>
+    <div id="background-Ajax">
+        <main>
+            <section id="enterTask">
+                <div class="nptField">
+                    <input type="text" placeholder="Title" id="nptTitle">
+                    <input type="text" placeholder="Description" id="nptDescribe">
+                    <div class="block__btn-color">
+                        <button class="btn-color btn-default"></button>
+                        <button class="btn-color btn-pink"></button>
+                        <button class="btn-color btn-blue"></button>
+                        <button class="btn-color btn-green"></button>
+                        <button class="btn-color btn-purple"></button>
+                    </div>
+                    <div class="addBtn">
+                        <button id="add"><i class="fas fa-plus"></i></button>
+                    </div>
+                </div>
+            </section>
+            <section id="block-counter">
+                <button id="counterTask">0</button>
+            </section>
+            <section id="todoList" id="todo">
+                <p id="msg-Empty">Aucune tâche en cours</p>
+                <!--<ul class="todoTitle"> Mon titre
+                    <li class="todoDescribe">Ma tâche</li>
+                    <div class="block__btn-list">
+                        <button class="btn-list btn-remove"><i class="fas fa-trash"></i></button>
+                        <button class="btn-list btn-checked"><i class="far fa-check-square"></i></button>
+                    </div>
+                </ul>-->
+            </section>
+        </main>
+    </div>
+    <footer>
+        <h2>BERCHEL Shirley | CDA COMPIEGNE | 2021</h2>
+    </footer>
+</body>
+</html>
